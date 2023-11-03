@@ -1,0 +1,45 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #EAE0D5; /* color claro basado en la imagen */
+    color: #4A4138; /* color oscuro basado en la imagen */
+}
+
+
+h1 {
+    padding-top: 1%;
+    color: #000000; /* color intermedio basado en la imagen */
+    font-size: 60px;
+}
+
+.list-group-item {
+    padding-top: 1%;
+    border: 1px solid #B6A89E; /* color de borde basado en la imagen */
+    background-color: #F5F1E8; /* color de fondo para los elementos de la lista */
+}
+
+.search-bar {
+    background-color: #F5F1E8;
+    border: 1px solid #B6A89E;
+}
+
+.btn-primary {
+    background-color: #8A7C70;
+    border-color: #8A7C70;
+    color: #F5F1E8;
+}
+
+.btn-primary:hover {
+    background-color: #6F645C;
+    border-color: #6F645C;
+}
+
+/* Agregando estilos para el contenedor del mapa */
+.map-container {
+    border: 1px solid #B6A89E;
+    padding: 10px;
+    background-color: #F5F1E8;
+}
+
+
+
+

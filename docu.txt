@@ -1,0 +1,3 @@
+conversor de Excel JSON:
+https://blog.groupdocs.cloud/es/conversion/convert-excel-to-json-and-json-to-excel-in-python/
+

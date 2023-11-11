@@ -53,8 +53,10 @@ body {
 }
 
 .search-bar {
+    text-align: center;
     background-color: #F5F1E8;
     border: 1px solid #B6A89E;
+    
 }
 
 .btn-primary {

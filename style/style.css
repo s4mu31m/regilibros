@@ -30,7 +30,7 @@ body {
 
 .header .nav-list li{
     display: inline-block;
-    padding: 0% 20px;
+    padding: 0% 5px;
 }
 
 .header .nav-list li:hover{
@@ -52,32 +52,69 @@ body {
     background-color: #F5F1E8; /* color de fondo para los elementos de la lista */
 }
 
-.search-bar {
-    text-align: center;
-    background-color: #F5F1E8;
-    border: 1px solid #B6A89E;
-    
-}
-
-.btn-primary {
-    width: 100%;
-    background-color: #8A7C70;
-    border-color: #8A7C70;
-    color: #F5F1E8;
-}
-
-.btn-primary:hover {
-    background-color: #6F645C;
-    border-color: #6F645C;
-}
-
 /* Agregando estilos para el contenedor del mapa */
 .map-container {
     border: 1px solid #B6A89E;
     padding: 10px;
     background-color: #F5F1E8;
+    transform: translate(50%, -50%);
+    padding: 10px;
+}
+/*Agregando estilos a ala barra de busqueda*/
+
+.contenedor{
+    position: relative;
+    left: 48%;
+    top: 45%; 
+
 }
 
+input{
+    outline: none;
+    box-sizing: border-box;
+    height: 60px;
+    width: 0;
+    padding: 0 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid #104b53;
+    transition: all .7s ease;
+}
 
+::placeholder{
+    color: #B6A89E;
+}
+
+.btn{
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background: #104b53;
+    line-height:80px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn i{
+    font-size: 25px;
+    color: aliceblue;
+    line-height: 80px;
+    transition: all .7 ease;
+}
+
+.contenedor:hover input{
+    width: 350px;
+}
+
+.contenedor:hover i{
+    transform: rotate(-360deg);
+}
+.btn:hover {
+    background: #104b53;
+}
 
 

@@ -117,4 +117,64 @@ input{
     background: #104b53;
 }
 
+/*Estilos de la portada*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
+.body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('path-to-your-background-image.jpg') no-repeat center center fixed;
+    background-color: #EAE0D5;
+    
+}
+  
+.contenedorP {
+    margin-top: 50px;
+    width: 960px;
+    height: 800;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.2); /* Fondo con transparencia */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+    margin: 20px; /* Espacio alrededor de los elementos */
+}
+
+.disponibilidad{
+    text-align: center;
+    float: right;
+    width: 640px;
+    height: 200px;
+}
+
+.portada{
+    width: 100px;
+    height: 25px;
+}
+
+.info-general{
+    text-align: center;
+    margin-top: 350px;
+    width: 900px;
+    height: 1000px; 
+}
+  
+.list {
+    list-style: none;
+    margin: 0; 
+    text-align: left;
+}
+  
+.list-group-inf {
+   margin-bottom: 10px;
+}
+  

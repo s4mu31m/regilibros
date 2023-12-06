@@ -177,4 +177,6 @@ input{
 .list-group-inf {
    margin-bottom: 10px;
 }
-  
+.hidden{
+    display: none;
+}

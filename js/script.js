@@ -13,4 +13,5 @@ function filterList() {
             li[i].classList.add('hidden');
         }
     }
+    console.log("filtro");
 }

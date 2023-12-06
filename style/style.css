@@ -20,9 +20,6 @@ body {
     width: auto;
     transition: all 0.3s;
 } 
-.header .logo img:hover{
-    transform: scale(1.2);
-}
 
 .header .nav-list{
     list-style: none;
@@ -35,7 +32,7 @@ body {
 
 .header .nav-list li:hover{
     transform: scale(1.1);
-}
+} 
 
 .header .nav-list a{
     font-size: 700;
@@ -108,7 +105,7 @@ input{
 
 .contenedor:hover input{
     width: 350px;
-}
+} 
 
 .contenedor:hover i{
     transform: rotate(-360deg);
@@ -117,4 +114,7 @@ input{
     background: #104b53;
 }
 
+.hidden {
+    display: none;
+}
 

@@ -1,0 +1,239 @@
+[
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "isbn": "7434103095",
+        "genre": "Novela hist\u00f3rica",
+        "ratings": [],
+        "availability": [
+            "auralibros"
+        ]
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "isbn": "9821625697",
+        "genre": "Novela",
+        "ratings": [],
+        "availability": [
+            "jerplaz",
+            "mundilibros",
+            "auralibros"
+        ]
+    },
+    {
+        "title": "El Principito",
+        "author": "Antoine de Saint-Exup\u00e9ry",
+        "isbn": "7441849085",
+        "genre": "F\u00e1bula",
+        "ratings": [],
+        "availability": [
+            "mundilibros",
+            "auralibros",
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "El se\u00f1or de los anillos",
+        "author": "J.R.R. Tolkien",
+        "isbn": "0665147143",
+        "genre": "Fantas\u00eda",
+        "ratings": [],
+        "availability": [
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "El se\u00f1or de los anillos II",
+        "author": "J.R.R. Tolkien",
+        "isbn": "2589234448",
+        "genre": "Fantas\u00eda",
+        "ratings": [],
+        "availability": [
+            "mundilibros",
+            "auralibros"
+        ]
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "isbn": "4224501730",
+        "genre": "Distop\u00eda",
+        "ratings": [],
+        "availability": [
+            "jerplaz",
+            "auralibros"
+        ]
+    },
+    {
+        "title": "Moby Dick",
+        "author": "Herman Melville",
+        "isbn": "0099682151",
+        "genre": "Aventura",
+        "ratings": [],
+        "availability": [
+            "mundilibros",
+            "auralibros",
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "El se\u00f1or de los anillos III",
+        "author": "J.R.R. Tolkien",
+        "isbn": "1902726968",
+        "genre": "Fantas\u00eda",
+        "ratings": [],
+        "availability": [
+            "auralibros",
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "Hamlet",
+        "author": "William Shakespeare",
+        "isbn": "7446762191",
+        "genre": "Tragedia",
+        "ratings": [],
+        "availability": [
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "isbn": "4082245554",
+        "genre": "Romance",
+        "ratings": [],
+        "availability": [
+            "jerplaz",
+            "mundilibros"
+        ]
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "isbn": "0531309330",
+        "genre": "Novela",
+        "ratings": [],
+        "availability": [
+            "jerplaz",
+            "mundilibros"
+        ]
+    },
+    {
+        "title": "Cien a\u00f1os de soledad",
+        "author": "Gabriel Garc\u00eda M\u00e1rquez",
+        "isbn": "7709378748",
+        "genre": "Realismo m\u00e1gico",
+        "ratings": [],
+        "availability": [
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "isbn": "1234567890",
+        "genre": "Distop\u00eda",
+        "ratings": [],
+        "availability": [
+            "jerplaz",
+            "auralibros"
+        ]
+    },
+    {
+        "title": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "isbn": "0987654321",
+        "genre": "Novela Psicol\u00f3gica",
+        "ratings": [],
+        "availability": [
+            "mundilibros"
+        ]
+    },
+    {
+        "title": "Don Quijote de la Mancha",
+        "author": "Miguel de Cervantes",
+        "isbn": "1122334455",
+        "genre": "Novela de Caballer\u00edas",
+        "ratings": [],
+        "availability": [
+            "auralibros",
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "The Count of Monte Cristo",
+        "author": "Alexandre Dumas",
+        "isbn": "5566778899",
+        "genre": "Aventura",
+        "ratings": [],
+        "availability": [
+            "mundilibros",
+            "auralibros"
+        ]
+    },
+    {
+        "title": "Jane Eyre",
+        "author": "Charlotte Bront\u00eb",
+        "isbn": "2233445566",
+        "genre": "Romance",
+        "ratings": [],
+        "availability": [
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "isbn": "6677889900",
+        "genre": "Distop\u00eda",
+        "ratings": [],
+        "availability": [
+            "mundilibros",
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "Anna Karenina",
+        "author": "Leo Tolstoy",
+        "isbn": "9988776655",
+        "genre": "Novela",
+        "ratings": [],
+        "availability": [
+            "auralibros"
+        ]
+    },
+    {
+        "title": "Wuthering Heights",
+        "author": "Emily Bront\u00eb",
+        "isbn": "5544332211",
+        "genre": "Tragedia",
+        "ratings": [],
+        "availability": [
+            "mundilibros",
+            "jerplaz"
+        ]
+    },
+    {
+        "title": "Frankenstein",
+        "author": "Mary Shelley",
+        "isbn": "3344556677",
+        "genre": "Ciencia Ficci\u00f3n",
+        "ratings": [],
+        "availability": [
+            "auralibros",
+            "mundilibros"
+        ]
+    },
+    {
+        "title": "Oliver Twist",
+        "author": "Charles Dickens",
+        "isbn": "7766554433",
+        "genre": "Novela Social",
+        "ratings": [],
+        "availability": [
+            "jerplaz"
+        ]
+    }
+]

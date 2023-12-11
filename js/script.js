@@ -15,3 +15,14 @@ function filterList() {
     }
     console.log("filtro");
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var image = document.getElementsByClassName('parallax-image');
+    new simpleParallax(image, {
+        // Opciones aquí. Por ejemplo:
+        scale: 1.5,
+       
+    });
+});
+  
+  

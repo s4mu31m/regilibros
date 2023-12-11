@@ -1,182 +1,228 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #EAE0D5; /* color claro basado en la imagen */
-    color: #4A4138; /* color oscuro basado en la imagen */
+  font-family: "Poppins", sans-serif;
+  background-color: #eae0d5; /* color claro basado en la imagen */
+  color: #4a4138; /* color oscuro basado en la imagen */
 }
 
-.header{
-    background-color: #104b53;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+.header {
+  background-color: #104b53;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header .logo {
-    cursor: pointer;
-}
-  
-.header .logo img{
-    height: 100px;
-    width: auto;
-    transition: all 0.3s;
-} 
-.header .logo img:hover{
-    transform: scale(1.2);
+  cursor: pointer;
 }
 
-.header .nav-list{
-    list-style: none;
+.header .logo img {
+  height: 100px;
+  width: auto;
+  transition: all 0.3s;
 }
 
-.header .nav-list li{
-    display: inline-block;
-    padding: 0% 5px;
+.header .nav-list {
+  list-style: none;
 }
 
-.header .nav-list li:hover{
-    transform: scale(1.1);
+.header .nav-list li {
+  display: inline-block;
+  padding: 0% 5px;
 }
 
-.header .nav-list a{
-    font-size: 700;
-    color: #F5F1E8;
-    text-decoration: none;
+.header .nav-list li:hover {
+  transform: scale(1.1);
 }
-.header .nav-list a:hover{
-    color:#d99b5e;
+
+.header .nav-list a {
+  font-size: 700;
+  color: #f5f1e8;
+  text-decoration: none;
+}
+.header .nav-list a:hover {
+  color: #d99b5e;
 }
 
 .list-group-item {
-    padding-top: 1%;
-    border: 1px solid #B6A89E; /* color de borde basado en la imagen */
-    background-color: #F5F1E8; /* color de fondo para los elementos de la lista */
+  padding-top: 1%;
+  border: 1px solid #b6a89e; /* color de borde basado en la imagen */
+  background-color: #f5f1e8; /* color de fondo para los elementos de la lista */
 }
 
 /* Agregando estilos para el contenedor del mapa */
 .map-container {
-    border: 1px solid #B6A89E;
-    padding: 10px;
-    background-color: #F5F1E8;
-    transform: translate(50%, -50%);
-    padding: 10px;
+  border: 1px solid #b6a89e;
+  padding: 10px;
+  background-color: #f5f1e8;
+  transform: translate(50%, -50%);
+  padding: 10px;
 }
 /*Agregando estilos a ala barra de busqueda*/
-
-.contenedor{
-    position: relative;
-    left: 48%;
-    top: 45%; 
-
+.container_busqueda {
+  position: relative;
+  height: 80px; /* Altura para asegurar que el contenedor tiene el tamaño adecuado */
+  margin-bottom: 15px;
 }
 
-input{
-    outline: none;
-    box-sizing: border-box;
-    height: 60px;
-    width: 0;
-    padding: 0 20px;
-    border-radius: 50px;
-    font-size: 20px;
-    border: 1px solid #104b53;
-    transition: all .7s ease;
+.contenedor {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
-::placeholder{
-    color: #B6A89E;
+input {
+  outline: none;
+  box-sizing: border-box;
+  height: 60px;
+  width: 0;
+  padding: 0;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #104b53;
+  transition: width 0.7s ease-out, padding 0.7s ease-out;
+  position: absolute;
+  right: 80px;
+  top: 10px;
+  cursor: pointer;
+  opacity: 0; /* Ocultar el input inicialmente */
+  z-index: 1; /* Asegurar que el input esté por encima del botón para poder hacer click en él */
 }
 
-.btn{
-    position: relative;
-    right: 0;
-    top: 0;
-    width: 80px;
-    height: 80px;
-    background: #104b53;
-    line-height:80px;
-    border-radius: 50%;
-    text-align: center;
-    cursor: pointer;
-    transition: .5s;
+input::placeholder {
+  color: #b6a89e;
+  transition: opacity 0.5s ease 0.5s; /* Añade un delay para mantener el placeholder visible */
 }
 
-.btn i{
-    font-size: 25px;
-    color: aliceblue;
-    line-height: 80px;
-    transition: all .7 ease;
+.lupa {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  background: #104b53;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  z-index: 2; /* Asegura que el botón esté encima del input */
 }
 
-.contenedor:hover input{
-    width: 350px;
+.lupa i {
+  font-size: 25px;
+  color: aliceblue;
+  transition: transform 0.7s ease;
 }
 
-.contenedor:hover i{
-    transform: rotate(-360deg);
-}
-.btn:hover {
-    background: #104b53;
-}
-
-/*Estilos de la portada*/
-*{
-    margin: 0px;
-    padding: 0px;
+.contenedor:hover input,
+.contenedor:focus-within input {
+  /* Usa focus-within para que el input no se encoja cuando está en foco */
+  width: 350px;
+  padding: 0 20px;
+  opacity: 1; /* Hacer el input visible en hover */
+  transition-delay: 0s; /* Elimina el delay cuando el input se expande */
 }
 
-.body, html {
-    margin: 0;
-    padding: 0;
+.contenedor input:hover,
+.contenedor input:focus {
+  /* Mantiene el input expandido y visible cuando se hace hover directamente sobre él */
+  width: 350px;
+  padding: 0 20px;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+input::placeholder {
+  transition: opacity 0.5s ease 0.5s; /* Mantén el placeholder visible por un tiempo después del hover */
+}
+
+.lupa:hover,
+.lupa:focus {
+  background: #0d7a83;
+}
+
+.contenedor:hover .lupa i {
+  transform: rotate(-360deg);
+}
+
+.hidden {
+  display: none;
+}
+
+.hero-image {
+  position: relative;
+  overflow: hidden; /* Evita que la imagen desborde su contenedor */
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+  transition: transform 0.3s ease-out; /* Suaviza la transición del efecto */
+}
+
+/* Asegúrate de que la imagen se ajuste a la pantalla y no sea demasiado larga */
+@media (min-width: 768px) {
+  .hero-image img {
+    height: 75vh; /* Ajusta este valor según la altura deseada */
+  }
+}
+/* Asegúrate de que tu contenedor esté completo y sin padding/margin no deseados */
+.container {
+  max-width: 1200px; /* O el ancho que prefieras */
+  margin: auto;
+  padding: 0;
+}
+
+/* Para pantallas medianas y grandes, usa flexbox para alinear lado a lado */
+@media (min-width: 768px) {
+  .row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('path-to-your-background-image.jpg') no-repeat center center fixed;
-    background-color: #EAE0D5;
-    
-}
-  
-.contenedorP {
-    margin-top: 50px;
-    width: 960px;
-    height: 800;
-    align-items: center;
-    min-height: 100vh;
-    background: rgba(255, 255, 255, 0.2); /* Fondo con transparencia */
-    backdrop-filter: blur(10px); /* Desenfoque del fondo */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
-    margin: 20px; /* Espacio alrededor de los elementos */
+    flex-wrap: wrap;
+  }
+  .col-md-6 {
+    flex: 0 0 50%; /* Cada columna ocupa el 50% del ancho del contenedor */
+    max-width: 50%; /* Máximo ancho del 50% para cada columna */
+  }
+  .img-fluid {
+    max-width: 100%;
+    height: auto; /* Asegura que la imagen sea responsiva y mantenga su aspecto */
+  }
 }
 
-.disponibilidad{
-    text-align: center;
-    float: right;
-    width: 640px;
-    height: 200px;
+.glasmorphic-container {
+  background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Borde sutil */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-top: 5vh; /* Espacio en la parte superior para bajar el contenedor */
+  padding: 20px; /* Espacio interior para no pegar el contenido a los bordes */
 }
 
-.portada{
-    width: 100px;
-    height: 25px;
+/* Asegúrate de que el glasmorfismo se vea bien en todos los navegadores */
+@media (-webkit-min-device-pixel-ratio: 0) {
+  .glasmorphic-container {
+    background: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /* Para navegadores basados en Webkit */
+  }
 }
 
-.info-general{
-    text-align: center;
-    margin-top: 350px;
-    width: 900px;
-    height: 1000px; 
+.info-general {
+  margin-top: 20px; /* Espacio adicional encima de la información general, si es necesario */
 }
-  
-.list {
-    list-style: none;
-    margin: 0; 
-    text-align: left;
+.book-title {
+  font-size: 3rem; /* Ajusta el tamaño del texto según sea necesario */
+  margin-top: 2rem; /* Añade un margen en la parte superior */
+  margin-bottom: 2rem; /* Añade un margen en la parte inferior */
+  font-weight: bold; /* Opcional: si quieres que el título sea más grueso */
 }
-  
-.list-group-inf {
-   margin-bottom: 10px;
+.img-libro {
+  margin-left: 150px;
+  width: 200px;
+  height: auto;
 }
-.hidden{
-    display: none;
-}
+

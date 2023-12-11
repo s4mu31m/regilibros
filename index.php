@@ -1,24 +1,15 @@
-<?php 
-require_once "partials/header.php"; 
+<?php
+require_once "partials/header.php";
 require_once "vendor/autoload.php";
-require_once 'database/config.php'; // Asegúrate de que la ruta a config.php sea correcta
+require_once 'database/config.php';
 
-// Conectarse a la base de datos usando la configuración
-$mongo = new MongoDB\Client($config['mongo_uri']);
-
-// Seleccionar la base de datos y la colección
-$collection = $mongo->selectCollection($config['mongo_db'], 'libros');
-
-// Obtener todos los documentos de la colección
-$documents = $collection->find();
+$documents = getMongoCollection('libros');
 
 // Guardar los documentos en un array
 $libros = [];
 foreach ($documents as $document) {
     $libros[] = $document;
 }
-
-
 
 ?>
 <header class="header">
@@ -35,27 +26,38 @@ foreach ($documents as $document) {
 
 </header>
 
-<div class="container-fluid">
-    <!-- Imagen de libros -->
-    <div class="hero-image" style="padding-bottom: 20px;">
-        <img src="img\hero.jpg" class="img-fluid" alt="libros bonitos">
+<div class="img-fluid hero-container">
+    <div id="hero" class="hero-image">
+        <img src="img/hero.jpg" alt="libros bonitos" class="parallax-image">
     </div>
 </div>
+
 <!-- barra de búsqueda -->
-<div class="contenedor">
-    <input type="text" id="searchBar" placeholder="Buscar" onkeyup="filterList()">
-    <div class="btn">
-        <i class="fa fa-search"></i>
+<div class="container-xl container_busqueda">
+    <div class="contenedor">
+        <input type="text" id="searchBar" placeholder="Buscar" onkeyup="filterList()">
+        <div class="btn lupa">
+            <i class="fa fa-search"></i>
+        </div>
     </div>
 </div>
 
 <div class="container-xl">
-    <ul class="list-group mb-4"id="list">
-        <!-- Repite este bloque por cada elemento de la lista -->
+    <ul class="list-group mb-4" id="list">
         <?php foreach ($libros as $libro) {
-        echo ("<li class='list-group-item'>". htmlspecialchars($libro['title'], ENT_QUOTES, 'UTF-8') ."</li>");
-    } ?>
-        
+            // Asumiendo que $libro['_id'] es un string o que puedes convertirlo a string
+            $libroId = (string) $libro['_id'];
+            echo "<li class='list-group-item d-flex justify-content-between align-items-center'>";
+            echo htmlspecialchars($libro['title'], ENT_QUOTES, 'UTF-8');
+
+            // Cambia el método a 'post'
+            echo "<form action='portada.php' method='post'>";
+            echo "<input type='hidden' name='libro_id' value='" . htmlspecialchars($libroId, ENT_QUOTES, 'UTF-8') . "'>";
+            echo "<button type='submit' class='btn btn-primary btn-sm'>Ver</button>";
+            echo "</form>";
+
+            echo "</li>";
+        } ?>
     </ul>
 
     <!-- Mapa y título -->

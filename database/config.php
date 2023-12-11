@@ -11,5 +11,10 @@ $config = [
     'mongo_uri' => $_ENV['MONGO_URI'],
     'mongo_db' => $_ENV['MONGO_DB']
 ];
-
-
+function getMongoCollection($collectionName)
+{
+    global $config;
+    $mongo = new MongoDB\Client($config['mongo_uri']);
+    $collection = $mongo->selectCollection($config['mongo_db'], $collectionName);
+    return $collection->find();
+};

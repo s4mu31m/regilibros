@@ -26,9 +26,9 @@ foreach ($documents as $document) {
 
 </header>
 
-<div class="img-fluid hero-container">
+<div class="img-fluid">
     <div id="hero" class="hero-image">
-        <img src="img/hero.jpg" alt="libros bonitos" class="parallax-image">
+        <img src="img/hero.webp" alt="libros bonitos" class="parallax-image">
     </div>
 </div>
 
